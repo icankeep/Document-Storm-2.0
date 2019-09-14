@@ -1,0 +1,38 @@
+server:
+  port: 8080
+  tomcat:
+    uri-encoding: utf-8
+  servlet:
+    session:
+      timeout: 30m
+
+spring:
+  datasource:
+    username: root
+    password: admin
+    url: jdbc:mysql://localhost:3306/document_storm?characterEncoding=utf8&serverTimezone=UTC&useUnicode=true&useSSL=true
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    max-idle: 10
+    max-wait: 10000
+    min-idle: 5
+    initial-size: 5
+  activemq:
+    broker-url: tcp://localhost:61616
+    in-memory: true
+    pool:
+      enabled: true
+      max-connections: 10
+      idle-timeout: 30000
+    user: admin
+    password: admin
+  jms:
+    pub-sub-domain: true
+
+#mybatis:
+#  mapper-locations: classpath:mapper/*.xml
+#  type-aliases-package: com.docstorm.documentstormcommon.domain
+
+###showSql
+#logging:
+#  level:
+#    root: debug
