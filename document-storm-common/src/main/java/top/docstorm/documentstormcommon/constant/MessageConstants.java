@@ -6,6 +6,5 @@ package top.docstorm.documentstormcommon.constant;
  * @version：2019/9/1
  */
 public interface MessageConstants {
-
-    public static final String FILE_MESSAGE_TOPIC_NAME = "file_message_topic";
+    String TRANS_FILE_MESSAGE_TOPIC_NAME = "trans_file_message_topic";
 }

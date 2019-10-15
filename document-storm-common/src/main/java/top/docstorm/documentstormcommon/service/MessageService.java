@@ -1,32 +1,16 @@
 package top.docstorm.documentstormcommon.service;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.jms.annotation.JmsListener;
-import org.springframework.jms.core.JmsTemplate;
-import org.springframework.stereotype.Service;
 import javax.jms.Topic;
 
 /**
- * @Description: 提供消息相关服务<p>
- * @author: passer<p>
- * @version：${DATE}<p>
+ * @Description: 提供消息相关的服务，发送消息等
+ * @author: passer
+ * @version：2019/9/19
  */
-public class MessageService {
+public interface MessageService {
+    void sendTransFileTopicMessage(String message);
 
-    @Autowired
-    private JmsTemplate jmsTemplate;
-    @Autowired
-    private Topic topic;
+    void sendMessage(Topic topic, String message);
 
-    public void sendTopicMessage(String message) {
-        jmsTemplate.convertAndSend(topic, message);
-    }
-
-//    @JmsListener(destination = MessageConstants.FILE_MESSAGE_TOPIC_NAME)
-//    public void receiveTopicMessage(String message) {
-//        System.out.println(message);
-//    }
-
+    void dealTransFileTopicMessage(String message);
 }

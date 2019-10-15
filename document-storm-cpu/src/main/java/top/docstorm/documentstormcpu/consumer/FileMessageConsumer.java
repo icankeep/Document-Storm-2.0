@@ -2,11 +2,11 @@ package top.docstorm.documentstormcpu.consumer;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jms.annotation.JmsListener;
 import org.springframework.stereotype.Service;
 import top.docstorm.documentstormcommon.constant.MessageConstants;
-import top.docstorm.documentstormcommon.domain.FileInfo;
-import top.docstorm.documentstormcommon.utils.FastJsonUtils;
+import top.docstorm.documentstormcommon.service.MessageService;
 
 
 /**
@@ -16,9 +16,13 @@ import top.docstorm.documentstormcommon.utils.FastJsonUtils;
 public class FileMessageConsumer {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(FileMessageConsumer.class);
-    @JmsListener(destination = MessageConstants.FILE_MESSAGE_TOPIC_NAME)
-    public void receiveTopicMessage(String message) {
+
+    @Autowired
+    private MessageService messageService;
+
+    @JmsListener(destination = MessageConstants.TRANS_FILE_MESSAGE_TOPIC_NAME)
+    public void receiveTransFileTopicMessage(String message) {
         LOGGER.info("receive message: " + message);
-        FileInfo fileInfo = FastJsonUtils.toBean(message, FileInfo.class);
+        messageService.dealTransFileTopicMessage(message);
     }
 }

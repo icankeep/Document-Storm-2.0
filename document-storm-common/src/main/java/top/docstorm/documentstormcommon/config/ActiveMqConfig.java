@@ -19,10 +19,11 @@ import javax.jms.Topic;
 @Configuration
 public class ActiveMqConfig {
 
-    @Bean
+    @Bean(name = MessageConstants.TRANS_FILE_MESSAGE_TOPIC_NAME)
     public Topic topic() {
-        return new ActiveMQTopic(MessageConstants.FILE_MESSAGE_TOPIC_NAME);
+        return new ActiveMQTopic(MessageConstants.TRANS_FILE_MESSAGE_TOPIC_NAME);
     }
+
     @Bean
     ConnectionFactory connectionFactory() {
         return new ActiveMQConnectionFactory();

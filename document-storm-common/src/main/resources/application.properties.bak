@@ -1,15 +1,15 @@
-##·ÃÎÊ¸ùÂ·¾¶
+##è®¿é—®æ ¹è·¯å¾„
 #
-##Ó¦ÓÃÃû³Æ
+##åº”ç”¨åç§°
 #spring.application.name=document-storm-platform
 #
-##·ÃÎÊ¶Ë¿ÚºÅ
+##è®¿é—®ç«¯å£å·
 #server.port=8080
 #
-##±àÂë¸ñÊ½
+##ç¼–ç æ ¼å¼
 #server.tomcat.uri-encoding=utf-8
 #
-##Êı¾İ¿âÏà¹ØÅäÖÃ
+##æ•°æ®åº“ç›¸å…³é…ç½®
 #mybatis.mapper-locations=classpath:mapper/*.xml
 #
 #spring.datasource.driver-class-name=com.mysql.cj.jdbc.Driver
@@ -21,27 +21,27 @@
 #spring.datasource.min-idle=5
 #spring.datasource.initial-size=5
 #
-##sessionÉúÃüÖÜÆÚ
+##sessionç”Ÿå‘½å‘¨æœŸ
 #server.servlet.session.timeout=30m
 #
 #
 ## failover:(tcp://localhost:61616,tcp://localhost:61617)
 ## tcp://localhost:61616
 #spring.activemq.broker-url=tcp://localhost:61616
-##true ±íÊ¾Ê¹ÓÃÄÚÖÃµÄMQ£¬falseÔòÁ¬½Ó·şÎñÆ÷
+##true è¡¨ç¤ºä½¿ç”¨å†…ç½®çš„MQï¼Œfalseåˆ™è¿æ¥æœåŠ¡å™¨
 #spring.activemq.in-memory=true
-##true±íÊ¾Ê¹ÓÃÁ¬½Ó³Ø£»falseÊ±£¬Ã¿·¢ËÍÒ»ÌõÊı¾İ´´½¨Ò»¸öÁ¬½Ó
+##trueè¡¨ç¤ºä½¿ç”¨è¿æ¥æ± ï¼›falseæ—¶ï¼Œæ¯å‘é€ä¸€æ¡æ•°æ®åˆ›å»ºä¸€ä¸ªè¿æ¥
 #spring.activemq.pool.enabled=true
-##Á¬½Ó³Ø×î´óÁ¬½ÓÊı
+##è¿æ¥æ± æœ€å¤§è¿æ¥æ•°
 #spring.activemq.pool.max-connections=10
-##¿ÕÏĞµÄÁ¬½Ó¹ıÆÚÊ±¼ä£¬Ä¬ÈÏÎª30Ãë
+##ç©ºé—²çš„è¿æ¥è¿‡æœŸæ—¶é—´ï¼Œé»˜è®¤ä¸º30ç§’
 #spring.activemq.pool.idle-timeout=30000
 #spring.activemq.user=admin
 #spring.activemq.password=admin
 #spring.jms.pub-sub-domain=true
 #
-##ÉèÖÃÓÃ»§Ãû
+##è®¾ç½®ç”¨æˆ·å
 #spring.security.user.name=root
-##ÉèÖÃÃÜÂë
+##è®¾ç½®å¯†ç 
 #spring.security.user.password=admin
 #
